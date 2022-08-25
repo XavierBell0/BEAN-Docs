@@ -87,7 +87,7 @@ The balloon we chose was the largest one commercially available that has a lift 
 
 ### Thrust Testing
 <p align="center">
-  <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/testStand.png" alt="Test Stand" height="300" />
+  <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/PropSelection.png" alt="Prop Selection" height="275"/> <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/testStand.png" alt="Test Stand" height="275" />
   <br>
   Left: Propellers 4-30mm BN, 40mm BN, 55mm BN, 55mm P, 65 HBN OR, 65 HBN Blue, 65mm BN, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
   Right: Thrust test Stand
