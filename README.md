@@ -27,7 +27,7 @@ Balloon max lift = 84.2g
 There are many existing motor configurations for blimp-like UAVs in academia and online. These designs were referenced in the creation of BEAN.
 
 <p align="center">
-<img src="README%20img/QuadMotorLayout.jpg" width=400px>
+<img src="READMEimg/QuadMotorLayout.jpg" width=400px>
   <br>
   Typical Quad motor layout
 </p>
@@ -37,7 +37,7 @@ A typical quadcopter has two pairs of motor that rotate in opposite direction wi
 <br>
 
 <p align="center" font-size: 10px>
-<img src="README%20img/servo%20control.png" width=600px>
+<img src="READMEimg/servo%20control.png" width=600px>
   <br>
    Blimp with (C) Sub-micro Servo SG51R; (D) 8520 Coreless Motor;
 </p>
@@ -47,7 +47,7 @@ Alvarez presents a lightwieght blimp design in "Evolved Neuromorpic Altitude Con
 <br>
 
 <p align="center">
-<img src="README%20img/GTMAB%20motor%20config.png" width=500px>
+<img src="READMEimg/GTMAB%20motor%20config.png" width=500px>
   <br>
   An example blimp gondola from Georgia Tech with various components located
 </p>
@@ -57,7 +57,7 @@ The Georgia Tech GT-MAB is designed for "Monocular Vision-based Human Following 
 <br>
 
 <p align="center">
-<img src="README%20img/3%20motor.png" width=500px>
+<img src="READMEimg/3%20motor.png" width=500px>
   <br>
   Frame of 3 motor blimp config
 </p>
@@ -67,7 +67,7 @@ Three motor configurations are somewhat common too, especially in the creation o
 <br>
 
 <p align="center">
-<img src="README%20img/BEANcad.png" width=500px>
+<img src="READMEimg/BEANcad.png" width=500px>
   <br>
   BEAN CAD with 4 motors
 </p>
@@ -87,7 +87,7 @@ The balloon we chose was the largest one commercially available that has a lift 
 
 ### Thrust Testing
 <p align="center">
-  <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/testStand.png" alt="Test Stand" height="300" />
+  <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/testStand.png" alt="Test Stand" height="300" />
   <br>
   Left: Propellers 4-30mm BN, 40mm BN, 55mm BN, 55mm P, 65 HBN OR, 65 HBN Blue, 65mm BN, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
   Right: Thrust test Stand
@@ -96,7 +96,7 @@ The balloon we chose was the largest one commercially available that has a lift 
 Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing. Dashed lines are testing the same prop on different motors of the same size.
 
 <p align="center">
-  <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PowerVThrust.png" alt="Power V Thrust" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/CurrentVEff.png" alt="Current V Efficiency" height="300" />
+  <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/PowerVThrust.png" alt="Power V Thrust" height="300"/> <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/CurrentVEff.png" alt="Current V Efficiency" height="300" />
   <br>
   Full data can be found <a href="https://docs.google.com/spreadsheets/d/1OiYe1rvC_GbhTWiBtDa-APiMod3p-sEL3HPwGkVhBRM/edit#gid=1969339479">here</a>
 </p>
@@ -108,7 +108,7 @@ While gear driven propellers would increase efficiency, the added weight of gear
 The computer in use is the Raspberry Pi Zero W 1.1. This is connected to an IMU, power sensor, and 340mAh 1S LiPo. A 5V boost converter steps up the 3.7V input from the battery to power the Pi. Another battery powers the L9110s motor controllers and 7x20mm motors. A second power sensor monitors the rate of power consumption. The Pi-side and motor-side circuits are connected through GPIO pins from the controllers to the Pi, I2C from power sensors, and a shared ground. The full schematic can be seen below.
 
 <p align="center">
-<img src="README%20img/BEANSchematic.png" width=500px>
+<img src="READMEimg/BEANSchematic.png" width=500px>
   <br>
   BEAN electrical schematic
 </p>
