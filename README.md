@@ -7,6 +7,11 @@ Low power robotic platforms, constrained by their small form or long endurance, 
 
 This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of actuation power at 1m/s.
 
+<p align="center">
+<img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/BEAN%20closeup.png" height=400px>
+  <br>
+</p>
+
 #### Table of Contents  
 **[Specs](#specs)**<br>
 **[Motor Config](#motor-config)**<br>
