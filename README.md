@@ -93,7 +93,7 @@ The balloon we chose was the largest one commercially available that has a lift 
   Right: Thrust test Stand
 </p>
   
-Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing. Dashed lines are testing the same prop on different motors of the same size.
+Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Once data is  collected into the spreadsheet it can be graphed using the <a href="https://github.com/XavierBell0/LEAN-Blimp/blob/main/testScripts/Thrust%20test%20plotting.py">plotter</a>. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing. Dashed lines are testing the same prop on different motors of the same size
 
 <p align="center">
   <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/PowerVThrust.png" alt="Power V Thrust" height="300"/> <img src="https://github.com/XavierBell0/BEAN-Docs/blob/main/READMEimg/CurrentVEff.png" alt="Current V Efficiency" height="300" />
