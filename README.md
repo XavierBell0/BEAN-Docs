@@ -1,7 +1,7 @@
 # BEAN  
 ## Blimp w/ Efficient Autonomous Navigation
 
-See build instructions and more specifications at the <a href="https://github.com/XavierBell0/LEAN-Blimp">LEAN-Blimp repo</a>
+### See build instructions and more specifications at the <a href="https://github.com/XavierBell0/LEAN-Blimp">LEAN-Blimp repo</a>
 
 Small form and long endurance missions require low power robotic systems. Small form factors have limited power sources and therefore can only operate for short periods of time. Long duration missions are more efficient if they consume less power and can function longer. These functions are especially useful for space platforms, monitoring systems, and medicine delivery. Decreasing power consumption increases mission duration. In these small and long duration regimes, the power required for computation and navigation is no longer negligible. 
 
