@@ -112,11 +112,49 @@ BEAN uses 7x20mm motors with 75mm propellers. From the above graphs, one can see
 
 While gear driven propellers would increase efficiency, the added weight of gearboxes exceeded our payload limit. Gear driven motors will be vital in future iterations. 
 
-### Electronics
-The computer in use is the Raspberry Pi Zero W 1.1. This is connected to an IMU, power sensor, and 340mAh 1S LiPo. A 5V boost converter steps up the 3.7V input from the battery to power the Pi. Another battery powers the L9110s motor controllers and 7x20mm motors. A second power sensor monitors the rate of power consumption. The Pi-side and motor-side circuits are connected through GPIO pins from the controllers to the Pi, I2C from power sensors, and a shared ground. The full schematic can be seen below.
+## Electronics
+The computer in use is the Raspberry Pi Zero W 1.1. This is connected to an IMU (MPU6050), power sensor (INA219), and 340mAh 1S LiPo. A 5V boost converter steps up the 3.7V input from the battery to power the Pi. Another battery powers the motor controllers (L9110s) and 7x20mm motors. A second power sensor monitors the rate of power consumption. The Pi-side and motor-side circuits are connected through GPIO pins from the controllers to the Pi, I2C from power sensors, and a shared ground. The full schematic can be seen below.
 
 <p align="center">
 <img src="READMEimg/BEANSchematic.png" width=500px>
   <br>
   BEAN electrical schematic
 </p>
+
+### Initial Electrical Implementation
+Wiring was messy on the first interation of BEAN. 2 power sensors, 4 motor controls, 1 IMU, 2 batteries, 1 boost converter, and one Raspberry Pi were all wired according to the above schematic. This resulted in wiring that was hard to debug, visually confusing, and literally heavy. On BEAN, every gram counts.
+
+<p align="center">
+<img src="READMEimg/BEANV1Wiring.jpg" width=400px>
+  <br>
+  BEAN V1 wiring
+</p>
+
+### PCB Development
+We decided to pursue a custom PCB sheild for the Pi. This PCB would have the following advantages:
+- Significant wieght removal
+- Remove possible wiring mistakes
+- Plugs directly on top of Pi
+- Decreases necessary gondola size
+- Applicable to any <4 motor robotics projects
+
+And the following system requirements:
+- Distributes power from seperate batteries to Pi/sensors and motors respectively
+- Deliver stable 5V power from 1S Lipo to Pi
+- Collect power data for pi/sensors and motors
+- IMU (linear acceleration, rotational rate) data
+- Interface with GPIO and I2C pins from Pi
+- Control up to 4 motors
+
+As the goal of this PCB was simply to condense the existing configuration, we tried to source from original IC schematics as much as possible. Most of the boards used in BEAN V1 had schematics online that showed component connections and (occasionally) layout were referenced heavily in the creation of the PCB. However, many of these schematics were in provided in EagleCAD while we used Altium. Along with converting syntax, the output pads, headers, and solder jumpers were deleted as these connections would primarily made internal to the PCB. The schematics were then linked using hierarchical design. Then the PCB was generated and the ports (battery, Pi GPIO, motor) placed as desired to guide the layout. Then we carefully placed components around each IC to optimize routing. After components were placed and routed, a power pour was used around the traces to the motor controller. This would avoid noise on the PWM signals generated on these traces. There is also a ground power on the backside of the PCB that can be accessed everywhere with a via. I go into much more detail on PCB development and iteration on these two slide decks <a href="https://docs.google.com/presentation/d/1KbL1qboD9gd7S2Hv6hgaKMFl9PEp3ugSsgFbRh5Mnb4/edit?usp=sharing">PCB V1</a> & <a href="https://docs.google.com/presentation/d/1TrqBSxfiY06AAGJsuXw84zKQXp05J4almzJWHtk7lUM/edit?usp=sharing">PCB V2</a>
+
+<p align="center">
+  <img src="READMEimg/PCBLayout.png" alt="Heirachical Design Layout" height="500"/> <img src="READMEimg/PCBV2TopView.png" alt=" " height="500" />
+  <br>
+  Left: Hierarchical design structure. Note that the power sensing is "downstream" of IMU power so its power draw is not included <br>
+  Right: PCB V2 design layout. Power sensors (top), IMU (middle), 5V boost (middle bottom by U6), motor controllers (L shape along bottom)
+</p>
+
+This PCB and its corresponding redesigned gondola decreased weight by over 25%. This allowed us to get a smaller more aerodynamiclly stable balloon. However, the gondola is even too light for the balloon as it needs a considerable 8g ballast to reach the desired buoyancy. This gives ample room for the camera and motion capture reflector balls. 
+
+The PCB was also designed for the other LEAN test platforms (a miniature boat and car) and is general purpose for any robotic platform with less than 4 motors.
